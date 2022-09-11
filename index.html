@@ -51,10 +51,15 @@
         Please proceed if you are human or a nearly-sentient robot
       </h2>
       <br />
+      <audio id="myAudio">
+        <source src="yay-sound-effect-no-copyright.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
       <a href="mailto:chebet.s.c@gmail.com">
         <button
           type="button"
           class="btn btn-light"
+          onclick="playAudio()"
           style="
             background-color: transparent;
             color: white;
@@ -65,6 +70,17 @@
           Click here to send an email to Miss Chitaha
         </button>
       </a>
+      <script>
+        var x = document.getElementById('myAudio')
+
+        function playAudio() {
+          x.play()
+        }
+
+        function pauseAudio() {
+          x.pause()
+        }
+      </script>
       <br />
       <br />
       <a
